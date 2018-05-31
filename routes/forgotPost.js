@@ -55,8 +55,7 @@ module.exports = function forgotPost(req, res, next) {
         from: 'passwordreset@InclineD.com',
         subject: 'Let\'s get you back on track!',
         text:
-          'http://localhost:8100/#/reset/' + token + '\n\n' +
-          'If you did not request this, please ignore this email and your password will remain unchanged.\n',
+          '',
         html:
           `<div style="font-size:14pt; width:80%; height: 100%;" align="center"><img src="cid:ForgotPWBackground@habit.com"/></div>  <br>  <br> 
           <div style="font-size:17pt; width:80%; height: 100%;" align="center"><strong>Forgot your password?</strong></div> <br>            
