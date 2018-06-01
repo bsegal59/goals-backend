@@ -35,6 +35,10 @@ var HabitSchema = mongoose.Schema({
 	reminder: {
 		type: Date, 
 	},
+	updateCounter: {
+		type: Number,
+		default: 0 // used for tracking how many continous days a Habit is performed
+	},
 	streakCounter: {
 		type: Number,
 		default: 0 // used for tracking how many continous days a Habit is performed
