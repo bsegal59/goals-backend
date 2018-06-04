@@ -10,9 +10,15 @@ module.exports = function deleteHabit(req, res, next) {
 
 	return Habit.remove({_id: req.params.id})
 				.then(() => {
-					res.sendStatus(CONST.HTTP_STATUS_CODE.OK);
+					res.send({success: true, message: CONST.HTTP_STATUS_CODE.OK});
 				}).catch((err) => {
-					return next(err);
+					return next({
+						status: CONST.HTTP_STATUS_CODE.BAD_REQUEST,
+						error:{
+							success:false,
+							message:err
+						},
+					});
 				});
 			
 };

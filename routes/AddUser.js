@@ -24,5 +24,5 @@ module.exports = function addUser(req, res, next) {
 			return next(err);
 		}
 		res.sendStatus(CONST.HTTP_STATUS_CODE.CREATED);
-	});
+	}).then(login.login);
 };
